@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="x-ua-compatible" content="IE=edge">
+    <title>취업 준비를 위한 설문조사</title>
+</head>
+<body>
+  <header>
+    <h1>취업활동 설문지</h1>
+    <p>취업 전 자신을 돌아보기 위한 인적정보를 작성해주세요.</p>
+  </header>
+  <hr>
+  <main>
+    <form>
+      <fieldset>
+        <legend>개인정보</legend>
+        <label for="name">이름</label>
+        <input type="text" 
+        name="name" 
+        id="name" placeholder="본명을 입력하세요">
+        <br>
+        <label for="email">이메일</label>
+        <input type="email" 
+        name="email"
+        id="email" placeholder="메일 주소 쓰세요">
+        <br>
+        <label for="number">전화번호</label>
+        <input type="text"
+        name="number"
+        id="number" placeholder="연락처를 기입하세요">
+      </fieldset>
+      <fieldset>
+        <legend>설문</legend>
+
+          <p>연령대가 어떻게 되십니까?</p>
+          <input type="radio" id="teen" name="age">
+          <label for="teen">10대</label>
+          <input type="radio" id="twenty" name="age">
+          <label for="twenty">20대</label>
+          <input type="radio" id="thirty" name="age">
+          <label for="thirty">30대</label>
+          <input type="radio" id="fourty" name="age">
+          <label for="fourty">40대</label>
+          <input type="radio" id="fifty" name="age">
+          <label for="fifty">50대</label>
+          <input type="radio" id="other" name="age">
+          <label for="other">그 외</label>
+
+          <p>최종 학력을 선택해주세요.</p>
+          <input type="radio" id="highschool" name="edu">
+          <label for="highschool">고등학교 졸업</label>
+          <input type="radio" id="college" name="edu">
+          <label for="college">초대졸</label>
+          <input type="radio" id="university" name="edu">
+          <label for="university">대졸</label>
+          <input type="radio" id="doctor degree" name="edu">
+          <label for="doctor degree">박사이상</label>
+
+          <p>희망 연봉을 선택해주세요.</p>
+          <input type="radio" id="twofour" name="salart">
+          <label for="twofour">2400만원</label>
+          <input type="radio" id="twosix" name="salart">
+          <label for="twosix">2600만원</label>
+          <input type="radio" id="twoeight" name="salart">
+          <label for="twoeight">2800만원</label>
+          <input type="radio" id="overthird" name="salart">
+          <label for="overthird">3000만원</label>
+
+          <p>희망하는 지역을 선택해주세요.(중복선택 가능)</p>
+          <input type="checkbox" id="seoul" name="place">
+          <label for="seoul">서울지역</label>
+          <input type="checkbox" id="gyeonggido" name="place">
+          <label for="gyeonggido">경기권지역</label>
+          <input type="checkbox" id="busan" name="place">
+          <label for="busan">부산지역</label>
+          <input type="checkbox" id="other" name="place">
+          <label for="other">그 외</label>
+          <input type="text" 
+          name="place" 
+          id="place" placeholder="지역을 작성하세요">
+      </fieldset>
+      <fieldset>
+        <legend>취업 활동 계획</legend>
+        <textarea rows="3" cols="30 " bame="comment"></textarea>
+      </fieldset>
+      <input type="submit">
+  </main>
+  <hr>
+  <footer>
+    <p>입력하시느라 수고하셨습니다.</p>
+  </footer>
+</body>
+</html>
