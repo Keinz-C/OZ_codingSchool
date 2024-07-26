@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>텍스트 꾸미기</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Nanum+Gothic&display=swap" rel="stylesheet">
+    <!-- 웹폰트 사용을 위해서는 폰트 link를 추가해야한다. -->
+    <style>
+      *{
+        font-family: "Nanum Gothic", monospace;
+      }
+
+      html{
+        font-size: 8px;
+      }
+      body{
+        font-size: 32px;
+      }
+      #first{
+        font-size: 3rem;
+        font-weight: 100;
+        line-height: 20px;
+        text-align: justify;
+        /* 폰트의 기본은 16px이다 */
+        /* em은 요소가 포함된 부모 요소의 값에서 곱하여 계산한다는 뜻 */
+        /* rem은 html에 포함된 모든 텍스트에 관여 */
+        /* font-weight는 글꼴마다 적용되는 수치가 다르다 */
+        /* text-align은 정렬을 의미하며 justify는 양끝 정렬이다 */
+      }
+    </style>
+</head>
+<body>
+  <p id="first">해바라기씨와 밀웜을 주면 햄스터가 기뻐합니다.</p>
+  <p>해바라기씨와 밀웜을 주면 햄스터가 기뻐합니다.</p>
+</body>
+</html>

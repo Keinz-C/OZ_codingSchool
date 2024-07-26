@@ -1,0 +1,121 @@
+HTML(HyperText Markup Language)은 웹 페이지의 구조를 나타내는 마크업 언어입니다.
+프로그래밍 언어? 파이썬, C, Java, JavaScript, Ruby
+
+1. 웹 페이지의 구조는 HTML 요소(element)의 집합으로 이루어져있다
+
+<div> -> 태그
+</div> -> 닫는 태그
+<div></div> -> 요소
+
+3. 여는 태그오하 닫는 태그 사이에는 텍스트, 그리고 다른 요소를 포함시킬 수 있습니다.
+<!-- 여는 태그와 다는 태그 사이에 텍스트 넣기 -->
+<div>여는 태그와 닫는 태그 사이에 이처럼 텍스트를 넣을 수 있습니다.</div>
+<!-- 여는 태그와 닫는 태그 사이에 다른 요소 넣기 (자식 요소) -->
+<div>
+    <div></div>
+    </div>
+<!-- 이때 감싸고 있는 요소를 부모 요소라고 한다.-->
+
+HTML이 계층 구조(트리구조)를 이루고 있다는 것을 이해해야 한다
+
+4.HTML 각 요소는 각기 사용할 수 있는 속성이 있다
+- a요소는 href 속성을 사용해 연결할 링크를 지정할  수 있다.
+- src는 소스의 약자
+
+5. HTML 요소를 선택할 때는 선택자를 사용한다. id, class
+- id는 딱 하나만 지정 가능
+<div id="container">
+<!-- #container -->
+- class는 여러 개의 요소를 지정할 수 있음
+
+-----------------------------------------------------------------------
+
+태그와 관련하여
+
+<body> <- 백엔드에서 작업하는 공간
+<div> - 범용성 높은 div 요소: 가장 기본적인 박스 형태
+<br> - 줄 바꿈
+<h1~6> - 제목과 글자 크기를 의미함
+<!--
+    <h1 id="main_title">메인 제목입니다</h1>
+    <h2>부 제목입니다</h2>
+    <h3 class="title">소제목 1</h3>
+    <h4 class="title">소제목 2</h4>
+    <h5 class="title">소제목 3</h5>
+    <h6 class="title">소제목 4</h6>
+<ul> - 순서와 상관 없는 리스트(unordered list)
+<li>는 ul, ol사이에 자식 요소로서만 사용할 수 있다.
+<ol> - 순서가 필요한 리스트
+<img> - 이미지 삽입
+<!--
+    .. - 한 단계 바깥 폴더로 이동
+    <img src="../src/IMG_7434.jpg" alt="예제 이미지">
+<alt> - 웹 접근성을 높이기 위해 이미지 삽입시 필히 추가해줘야하는 태그, 시각장애인에게 이미지에 대한 설명을 해주는 태그
+<form> - submit(제출) 이벤트를 발생시켜야 할 때 사용하는 요소
+<!--
+    <fieldset>
+    <!-- 범례 : legend-->
+    <legend>기본 텍스트</legend>
+    <!-- 입력을 받을 때는 input -->
+    <input type="text" placeholder="텍스트를 입력하세요">
+    <input>은 셀프 클로징 요소임
+    <placeholder>은 텍스트를 안에 보여줌
+    </fieldset>
+    <label>
+        <input type="radio" name="radio">
+        옵션
+    </label>
+    <label> - 해당 요소로 input 태그를 넣어 자식 요소로 작성 가능하도록 도움을 줌 / 이때 label은 부모요소
+    <radio> - 하나의 요소만 선택이 필요할 때
+    <!--
+    <label>
+        <input type="radio" name="radio">옵션1
+    </label>
+    <chekbox> - 여러 요소의 선택이 필요할 때
+    <!--
+    <label>
+        <input type="radio" name="interest" value=""
+<!-- 숫자 -->
+    <input type="number" placeholder="">
+    <min> - 최솟값 설정
+    <max> - 최댓값 설정
+<!-- 비밀번호 -->
+    <input type="password" placeholder="비밀번호">
+<!-- 이메일 -->
+    <input type="email" placeholder="exam@ple.com">
+<!-- 그 외 다양한 input -->
+    <input type="time">
+    <input type="date">
+    <input type="color">
+    <input type="file" multiple>
+    <input type="file" accept="image/*">
+<button>
+    <button type="submit">submit 버튼</button> - submit은 새로고침이 일어남 자바스크립트를 사용하면 새로고침을 막을 수 있음
+    <button type="reset">reset 버튼</button>
+    <button type="button">그냥 버튼</button>
+<하이퍼링크>
+    <!-- 하이퍼링크는 a 요소 -->
+        <a href="https://developer.mozilla.org/ko/docs/Web/HTML/Element/a">mdf요소</a>
+        <.>은 현재 내가 있는 폴더 경로를 의미한다.
+<div></div>
+    <!-- div는 대표적인 block 요소로 한 줄 전체를 차지한다. -->
+    <span></span> - span 요소는 inline 속성을 가지고 있기 때문에 한 줄에 여러 개가 표현된다. 입력한 텍스트 수만큼 길이가 결정됨.
+    <p></p> - 여러 문장으로 구성된 텍스트를 담을 때 사용된다. 문단을 나눠야 할 때에는 p가 좋음. p요소는 자동으로 여백이 주어져서 문단을 구분.
+<시멘틱의 필요성> 
+    1. 협업을 위해서 필요함
+    2. 시각장애인에게 웹 접근성을 제공할 수 있음
+    3. 검색 엔진이 footer를 기반으로 해당 페이지를 찾아주기 때문에
+<header></header>헤더는 페이지의 머리말을 정의
+<nav></nav> - 네비게이션 요소
+<article></article> - 아티클은 독립적으로 구분될 수 있는 콘텐츠를 담음
+<section></section> - 섹션은 관련된 콘텐츠를 그룹화
+<aside></aside> - 어사이드는 페이지의 부가 정보를 담음
+<footer></footer> 푸터는 페이지의 바닥글, 검색 엔진은 footer를 통해서 웹 페이지를 찾아줌
+<audio> - 오디오 파일을 삽입합니다.
+    <!--
+        <audio controls>
+            <source src="링크" type="오디오파일명">
+            <p>dheldh wldnjs. <a href="경로">여기</a>
+    -->
+<video> - 비디오 파일 삽입
+    <퍙대 채ㅜㅅ개ㅣㄴ 쟝소
