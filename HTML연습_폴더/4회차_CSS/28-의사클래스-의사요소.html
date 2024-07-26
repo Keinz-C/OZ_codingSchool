@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>의사 클래스 & 의사 요소</title>
+    <style>
+      .menu{
+        padding: 10px;
+        border-bottom: 1px solid black;
+      }
+      .menu > li{
+        display: inline-block;
+        text-align: center;
+      }
+      li > a{
+        display: inline-block;
+        width: 80px;
+        padding: 10px;
+        text-decoration: none;
+      }
+
+      a:hover{
+        color: white;
+        background-color: gray;
+      }
+      a:active{
+        color: white;
+        background-color: black;
+      }
+      li:nth-child(2n-1){
+        font-size: 20px;
+        /* nth-child는 ()안에 n을 넣음으로 모든 자연수에 속성 값을 줄 수 있음
+        마찬가지로 2n은 짝수번째, 2n-1은 홀수번째에 속성 값을 줌
+        */
+      }
+      a::first-letter{
+        color: green;
+      }
+      a::after{
+        /*
+        after나 before에는 content를 추가할 수 있음
+        */
+        content: "보기";
+        color: yellow;
+      }
+      a::before{
+        /*
+        after나 before에는 content를 추가할 수 있음
+        */
+        content: "보기";
+        color: yellow;
+      }
+    </style>
+</head>
+<body>
+  <ul class="menu">
+    <li><a href="#">사전</a></li>
+    <li><a href="#">뉴스</a></li>
+    <li><a href="#">증권</a></li>
+    <li><a href="#">지도</a></li>
+  </ul>
+</body>
+</html>

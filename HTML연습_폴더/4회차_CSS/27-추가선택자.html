@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>선택자 더 알아보기</title>
+    <style>
+      /*
+      기호와 함께 사용하는 속성 선택자
+      * : 값의 포함 여부
+      ^ : 값의 시작 여부
+      $ : 값의 끝 여부
+      */
+      img[alt]{
+        border: 5px dashed red;
+        /* 태그명 없이 대괄호만 쳐져있어도 적용할 수 있다. */
+      }
+      [width $="0"]{
+        border: 5px dashed red;
+      }
+
+      p > em{
+        color: blue;
+        /*
+        선택자에서는 공백이 ~~포함된을 의미한다
+        ">"는 상위 요소에 포함된 하위 요소에 값을 줄 때
+        */
+      }
+      #sam ~ p{
+        color: orange;
+        /*
+        +는 인접 형제, ~은 전체 형제 요소를 의미한다
+        */
+      }
+      #sma ~ img{
+        display: none;
+        /*
+        형제 선택자는 뒤이어 등장하는 형제들을 대상으로 한다
+        */
+      }
+    </style>
+</head>
+<body>
+  <img src="images/햄수탁스.webp" width="120" alt="햄스터">
+  <img src="images/햄수탁스.webp" width="120">
+  <img src="images/햄수탁스.webp" width="120" id="sam">
+  <p>햄스터는 매우 귀여우며 쥐과에 속한다.</p>
+  <p>해바라기씨도 좋아하고, <em>쳇바퀴도 좋아한다.</em></p>
+  <p>야행성이기 때문에 밤에는 쳇바퀴를 돌리며 다소 시끄럽다.</p>
+</body>
+</html>

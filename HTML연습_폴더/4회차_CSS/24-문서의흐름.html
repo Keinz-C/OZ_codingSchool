@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>문서의 흐름</title>
+    <style>
+      .container{
+        height: 400px;
+        border: 1px solid black;
+      }
+
+      #first{
+        float: right;
+        /* 요소를 문서의 기본적인 흐름에서 제외하고
+        상위 요소의 왼쪽이나 오른쪽에 배치한다. */
+      }
+      #second{
+        float: left;
+      }
+      p{
+        clear: both;
+        /* float을 사용해 생긴 역효과를 대응하기 위해 있다 */
+      }
+    </style>
+</head>
+<body>
+  <div class="container">
+    <img id="first"
+    src="images/햄수탁스.webp" width="160">
+    <img id="second"
+    src="images/햄수탁스.webp" width="160">
+    <p>
+      햄스터는 매우 귀여우며 쥐과에 속한다.
+      해바라기씨도 좋아하고, 쳇바퀴도 좋아한다.
+      야행성이기 때문에 밤에는 쳇바퀴를 돌리며 다소 시끄럽다.
+    </p>
+  </div>
+</body>
+</html>
