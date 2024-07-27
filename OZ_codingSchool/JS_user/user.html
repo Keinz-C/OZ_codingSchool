@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>조명수의 정보 입력받고 출력 가즈아~~~~</title>
+</head>
+<body>
+  
+  <p id="name"></p>
+  <p id="pet"></p>
+  <p id="reason"></p>
+
+  <script>
+    document.querySelector("#name")
+    .textContent = `이름은 ${prompt("이름은 무엇인가요?")} 입니다!`
+
+    document.querySelector("#pet")
+    .textContent = `좋아하는 동물은 ${prompt("좋아하는 동물은 무엇인가요?")} 입니다!`
+
+    const reasonElement = document.querySelector("#reason")
+    let reason = prompt("그 이유는 무엇인가요?")
+    reasonElement.textContent = reason
+  </script>
+</body>
+</html>

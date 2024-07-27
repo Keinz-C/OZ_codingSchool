@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>템플릿 리터럴</title>
+</head>
+<body>
+  
+  <script>
+
+    // 문자열 포맷팅
+    const dog = "강아지"
+    const cat = '고양이'  
+    console.log(typeof cat)
+
+    // 템플릿 리터럴 사이에 일반 문자열(공백 등)을 작성해도 괜찮음.
+    const modifier = "귀여운"
+    const prettyDog = `${modifier}    ${dog}`
+    console.log(prettyDog)
+
+    const prettyPet = `${modifier} ${prompt("좋아하는 동물은")}!`
+
+    console.log(prettyPet)
+
+    
+  </script>
+</body>
+</html>
