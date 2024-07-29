@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>조건문 만들기</title>
+</head>
+<body>
+  
+  <h1></h1>
+  <p></p>
+
+  <script>
+    const h1 = document.querySelector('h1')
+    const p = document.querySelector('p')
+
+
+    // confirm은 사용자에 확인 혹은 취소를 받아 true 혹은 false로 나타낸다
+    const isThere = confirm("제목 표시를 할까요?")
+
+    if(isThere){
+      h1.textContent = "당신이 내야 할 버스요금은?"
+    }
+
+      // parseInt는 숫자로 받는다
+    const age = parseInt(prompt("나이가 어떻게 되세요?"))
+
+    // else는 갯수 제한이 없기 때문에 세분화 할 수 있다. 단 효율적이지는 못한다. 중괄호가 많아도 그 중 하나만 선택한다.
+    if(age >= 20){
+      p.textContent = "삑! 성입니다. 1500원입니다."
+    }else if(age >= 8){
+      p.textContent = "삑! 청소년입니다. 750원입니다."
+    }else{
+      p.textContent = "삑! 무료대상입니다."
+    }
+
+
+  </script>
+</body>
+</html>

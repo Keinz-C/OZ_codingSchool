@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>비교 연산</title>
+</head>
+<body>
+  
+  
+  <script>
+    let age = prompt("당신의 나이는?")
+    console.log(20 == age)
+    // parseInt는 숫자로만 구성되어 있는 문자열을 진짜 숫자로 바꾸어 준다. 괄호안에 있는 숫자
+    // 엄격한 비교는 자료값까지 같아야한다.
+
+    let name = prompt("당신의 이름은?")
+    document.write(`사용자의 이름은 ${name}입니다<br>`)
+    document.write(`우리가 찾던 사람인가? ${"조명수" === name}`)
+    //write는 DOM에 html코드를 추가해서 페이지에 반영하는 메소드이다. 진짜 html이 바뀌는 것이 아닌 콘솔에서 바뀐다.
+  </script>
+</body>
+</html>
