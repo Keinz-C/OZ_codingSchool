@@ -1,0 +1,49 @@
+.SearchBox{
+  border-radius: 5px;
+}
+
+
+
+#gender{
+  width: auto;
+  height: 50px;
+  box-sizing: border-box;
+  border-radius: 50%;
+  padding: 0;
+  border: 1px solid #c4c4c4;
+  font-size: 16px;
+  display: inline-block;
+  text-align: center;
+  background-color: black;
+  font-style: strong;
+  color: white;
+  font-weight: bold;
+}
+
+#timeDisplay{
+  box-sizing: border-box;
+  font-size: 13px;
+  font-weight: lighter;
+}
+
+.btn-group{
+  float: right;
+}
+
+/* 
+background-color dark theme light theme change
+*/
+
+body.light-mode{
+  background-color: white;
+  color: black;
+}
+
+body.dark-mode{
+  background-color: black;
+  color: white;
+}
+
+.btn-group{
+  margin: 10px 10px; 
+}

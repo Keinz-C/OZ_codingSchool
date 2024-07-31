@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <title>Admin Page</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
+    <link href="Adminpage.css" rel="stylesheet">
+    <link href="join.html" rel="import">
+</head>
+<body>
+  <div class="time-display" id="timeDisplay"></div>   
+  <div class="btn-group" id="webMode">
+    <button type="button" class="btn btn-dark" aria-label="Change Dark web page" onclick="setDarkMode()">Dark</button>
+    <button type="button" class="btn btn-outline-dark" aria-label="Change Light web page" onclick="setLightMode()">Light</button>
+  </div>
+				<div class="cot-3">
+        <h3 class="mt-5 mb-3">신규 등록 상품</h3>
+        <form class="row row-cols-lg-auto g-3 align-items-center">      
+            <div class="col-12">
+              <label class="visually-hidden" for="inlineFormSelectPref">Preference</label>
+              <select class="form-select" id="inlineFormSelectPref">
+                <!-- 
+                  option 태그를 이용하여 select 내용을 추가한 후 value 속성을 통해 값을 지정
+                -->
+                <option value="All" selected>전체</option>
+                <option value="Top">상의</option>
+                <option value="Bottom">하의</option>
+                <option value="Shoes">신발</option>
+                <option value="Accessory">액세서리</option>
+              </select>
+            </div>
+            <div>
+              <select class="gender-select" id="gender" aria-label="gender-sselect">
+                <option value="male" aria-label="male" selected>남자</option>
+                <option value="female" aria-label="female">여자</option>
+              </select>
+            </div>
+            <div class="col-3">
+                <!-- input 입력창 코드를 넣어주세요 -->
+                <!-- input을 이용하여 검색창 작업-->
+                <input  type="text" placeholder="상품명을 입력하세요." class="SearchBox">
+              </div>
+              <div class="col-auto">
+                <!-- 조회버튼 코드를 넣어주세요 -->
+                 <!-- button을 이용하여 검색 버튼 작업-->
+                <button type="button" class="btn btn-outline-primary">Search</button>
+              </div>
+            <div class="d-flex justify-content-end">
+              <a href="join.html" class="btn btn-outline-dark">로그인</a>
+            </div>
+          </form>
+          <div class="container mt-3">
+        <table class="table table-striped">
+            <thead class="Product-Menu">
+                <!-- 열의 속성값을 나타내는 코드를 작성해주세요 (예 : 카테고리, 브랜드, 상품명, 가격) -->
+                 <th class="category">카테고리</th>
+                 <th class="brand">브랜드</th>
+                 <th class="product">상품명</th>
+                 <th class="price">가격</th>
+            </thead>
+            <tbody id="data-table">
+                <!-- 추후 크롤링한 데이터가 들어가는 자리 -->
+            </tbody>
+        </table>
+	    </div>
+    </div>
+    <!-- 페이지 네이션 코드를 넣어주세요 -->
+     <div class="pagenavigation">
+    <nav aria-label="Page navigation example">
+      <ul class="pagination justify-content-center">
+        <li class="page-item"><a class="page-link" href="#" id="previous" onclick="changePage(currentPage - 1)">첫 페이지</a></li>
+        <li class="page-item"><a class="page-link" href="#" onclick="changePage(1)">1</a></li>
+        <li class="page-item"><a class="page-link" href="#" onclick="changePage(2)">2</a></li>
+        <li class="page-item"><a class="page-link" href="#" onclick="changePage(3)">3</a></li>
+        <li class="page-item"><a class="page-link" href="#" id="next" onclick="changePage(currentPage + 1)">마지막 페이지</a></li>
+      </ul>
+    </nav>
+    </div>
+   <script>
+      // 크롤링한 데이터를 아래와 같은 형태의 객체 배열로 가정합니다.
+      // 추후 데이터베이스에 있는 데이터를 쿼리문으로 불러 올 수 있게 쿼리르 작성해 볼 수 있음
+      const data = [
+          { category: "상의", brand: 'Supreme', product: '슈프림 박스로고 후드티', price: '390,000' },
+          { category: "하의", brand: 'DIESEL', product: '디젤 트랙 팬츠', price: '188,000' },
+          { category: "신발", brand: 'Nike', product: '에어포스 1', price: '137,000' },
+          { category: "패션잡화", brand: 'Music&Goods', product: '빵빵이 키링', price: '29,000' },
+          // ...
+      ];
+      
+      const dataTable = document.getElementById('data-table');
+      
+      data.forEach((item) => {
+          const row = dataTable.insertRow();
+          row.insertCell(0).innerHTML = item.category;
+          row.insertCell(1).innerHTML = item.brand;
+          row.insertCell(2).innerHTML = item.product;
+          row.insertCell(3).innerHTML = item.price;
+      });
+
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm" crossorigin="anonymous"></script>
+    <script src="Adminpage.js"></script>
+</body>
+</html>
