@@ -1,0 +1,4 @@
+-- CREATE DATABASE mydatabase;	-- mydatabase 라는 이름을 가진 데이터베이스를 생성
+-- SHOW DATABASES;	-- 데이터베이스 목록 조회
+-- USE mydatabase;	-- 데이터베이스 사용
+-- DROP DATABASE IF EXISTS mydatabase;	-- 데이터베이스 삭제(IF EXISTS 옵션 사용)

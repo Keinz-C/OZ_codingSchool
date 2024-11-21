@@ -1,0 +1,25 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+<h1>Create User</h1>
+<a href="/users/register">회원 가입</a>
+<h1>User List</h1>
+<p>
+<ul>
+    {% for user in users %}
+        <li>id: {{ user.id }}, username: {{ user.username }}</li>
+        <a href="/users/{{ user.id }}">user details</a>
+        <a href="/users/{{ user.id }}/edit">username 수정</a>
+        <a href="/users/{{ user.id }}/remove">user 삭제</a>
+    {% endfor %}
+</ul>
+</p>
+</body>
+</html>

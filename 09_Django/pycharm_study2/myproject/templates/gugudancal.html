@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <h1>{{ dan }}단</h1>
+    {% for i, result in results %}
+        <p>{{ dan }} X {{ forloop.counter }} = {{ result }}</p>
+    {% endfor %}
+    {# 쓸데없는 리소스를 잡아먹는 방법이라서 비추, 방법이 있다는 것만 알면 됨 #}
+{#    {% for i in range %}#}
+{#        <p>{{ dan }} X {{ i }} = {% widthratio dan 1 i %}</p>   {# 첫 번째 인자 / 두 번째 인자 * 세 번째 인자 #}
+{#    {% endfor %}#}
+</body>
+</html>

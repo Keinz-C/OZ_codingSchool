@@ -1,0 +1,178 @@
+h5 {
+    justify-content: center;
+    align-items: center;
+    font-weight: bold!important;
+}
+
+.navbar {
+    background-color: black!important; 
+    color: white;
+    padding: 10px; 
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 60px;
+  }
+
+  .container-fluid {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .navbar-brand {
+    display: flex;
+    align-items: center;
+  }
+
+.custom-btn {
+    display: flex;
+    justify-content: center;
+    background-color: rgb(255, 255, 255);
+    text-align: center;
+    font-size: 14px;
+    margin-left: 10px;
+    margin-right: -17px;
+    font-weight: bold!important;
+}
+
+.btn-dark-mode {
+    display: flex;
+    justify-content: right;
+    background-color: rgb(255, 255, 255);
+    text-align: center;
+    font-size: 14px;
+    margin-left: auto;
+    font-weight: bold;
+}
+
+.form-group {
+    margin-top: 5px;
+    display: flex;
+    gap: 10px;
+    align-items: center;
+}
+
+.selector {
+    margin-left: 10px;
+    width: 120px;
+    height: 40px;
+}
+
+.gender-selector {
+    width: 80px;
+    height: 40px;
+}
+
+.form-control {
+    width: 250px;
+    height: 40px;
+}
+
+body[data-theme="light"] .btn-search {
+    display: flex;
+    justify-content: center;
+    background-color: rgb(0, 0, 0);
+    color: white;
+    text-align: center;
+    font-size: 16px;
+    border-color: black;
+}
+
+body[data-theme="dark"] .btn-search {
+    display: flex;
+    justify-content: center;
+    background-color: rgb(255, 255, 255);
+    color: rgb(0, 0, 0);
+    text-align: center;
+    font-size: 16px;
+    border-color: black;
+}
+
+.container {
+    margin-top: 10px;
+    display: flex;
+    justify-content: space-between;
+    padding: 10px 10px;
+    max-width: 100%!important;
+    font-weight: bold!important;
+}
+
+.date-time {
+    text-align: right;
+}
+
+body[data-theme="light"] {
+    background-color: white;
+    color: black;
+}
+
+body[data-theme="dark"] {
+    background-color: rgb(37, 37, 37);
+    color: white;
+}
+
+body[data-theme="light"] .table-sm {
+    background-color: #ffffff;
+    color: rgb(0, 0, 0);
+}
+
+body[data-theme="dark"] .table-sm {
+    background-color: rgb(26, 26, 26);
+    color: rgb(255, 255, 255);
+}
+
+.table-sm th, .table-sm td {
+    border-color: #000000;
+}
+
+.page-link {
+    margin-top: 30px;
+    background-color: rgb(255, 255, 255);
+    color: rgb(0, 0, 0);
+}
+
+table {
+    margin-top: 20px;
+    width: 100%;
+    border-collapse: collapse;
+}
+
+body[data-theme="light"] td {
+    padding: 4px;
+    text-align: center;
+    border: 1px solid #000000;
+}
+
+body[data-theme="dark"] td {
+    padding: 4px;
+    text-align: center;
+    border: 1px solid #ffffff;
+}
+
+body[data-theme="light"] th {
+    background-color: #000000;
+    color: #ffffff;
+    font-weight: bold;
+    text-align: center;
+    border: 1px solid #ffffff;
+}
+
+body[data-theme="dark"] th {
+    background-color: #ffffff;
+    color: #000000;
+    font-weight: bold;
+    text-align: center;
+    border: 1px solid #000000;
+}
+
+body[data-theme="light"] .pagination {
+    --bs-pagination-active-bg: black;
+    --bs-pagination-active-color: white;
+    --bs-pagination-active-border-color: black;
+}
+
+body[data-theme="dark"] .pagination {
+    --bs-pagination-active-bg: rgb(187, 187, 187);
+    --bs-pagination-active-color: black;
+    --bs-pagination-active-border-color: rgb(187, 187, 187);
+}

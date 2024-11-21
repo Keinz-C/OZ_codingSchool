@@ -1,0 +1,10 @@
+SECRET_KEY="django-insecure-im8@bpwvi$@so!+7w8cp6npw^se*s#5tfy#q7xz2morb0t5dhl"
+DATABASE_URL="postgres://mac:1234@localhost:5432/gagyebu"
+DEBUG=Ture
+#  협업
+DB_NAME1="test_gagyebu"
+DB_NAME2="gagyebu"
+DB_USER="mac"
+DB_PASSWORD="1234"
+DB_HOST="localhost"
+DB_PORT="5432"

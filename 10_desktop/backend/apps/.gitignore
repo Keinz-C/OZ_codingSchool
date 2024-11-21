@@ -1,0 +1,25 @@
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Django stuff:
+*.log
+db.sqlite3
+/media
+/static
+
+# Virtual environments
+.env
+.venv
+ENV/
+
+# PyCharm specific
+.idea/
+
+# Poetry specific
+.poetry
+
+# Other ignored files
+*.env
+*.DS_Store
